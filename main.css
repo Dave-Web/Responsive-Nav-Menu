@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+}
+nav {
+    background: #412424;
+    padding: 0 20px;
+}
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+.nav-menu, 
+.drop-down-menu {
+    list-style-type: none;
+}
+.item {
+    padding: 15px;
+}
+.item a:hover, 
+.item a:hover::after {
+    color: #aaa6a6;
+}
+
+/* Mobile Screen first*/
+
+.nav-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-menu li a {
+    display: block;
+    padding: 20px 10px;
+}
+
+.nav-menu li.drop-down-item a {
+    padding: 17.5px;
+}
+
+.toggle {
+    order: 1;
+    font-size: 20px;
+}
+
+.item {
+    order: 2;
+    width: 100%;
+    text-align: center;
+    display: none;
+}
+
+.active .item {
+display: block;
+}
+
+/* drop-down-menu mobile */
+
+.drop-down-menu {
+    display: none;
+}
+
+.drop-down i {
+    font-size: 12px;
+}
+.drop-down-menu-active .drop-down-menu {
+    display: block;
+}
+
+.drop-down > a::after {
+    font-family: "font awesome 5 free";
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: bold;
+    content: "\f078";
+    color: #ffffff;
+    padding-left: 10px;
+}
+
+.drop-down-item a {
+    padding: 20px 8px;
+}
+
+.drop-down-menu-active {
+    background-color: #250c0c;
+    border-radius: 3px;
+}
+
+/* Desktop menu */
+@media all and (min-width: 960px) {
+    .nav-menu {
+        justify-content: center;
+        flex-wrap: nowrap;
+        background: none;
+    }
+
+    .logo {
+        flex: 1;
+        order: 0;
+    }
+
+    .item {
+        order: 1;
+        position: relative;
+        display: block;
+        width: auto;
+    }
+
+    .toggle {
+        flex: 1;
+        text-align: right;
+        order: 2;
+        display: none;
+    }
+
+    .drop-down-menu-active .drop-down-menu {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 75px;
+        background: #250c0c;
+    }
+
+    .drop-down-menu-active {
+        border-radius: 0;
+    }
+}
+
+h1 {
+  padding-top: 50px;
+  text-align: center;
+}
